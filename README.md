@@ -1,4 +1,4 @@
-# unity-evmgames-localstorage
+# unity-daylight
 This package contains a utility to get the daylight settings working on behaviours and documents.
 
 # Install
