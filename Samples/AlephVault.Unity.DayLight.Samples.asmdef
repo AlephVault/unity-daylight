@@ -1,0 +1,16 @@
+{
+    "name": "AlephVault.Unity.DayLight.Samples",
+    "rootNamespace": "",
+    "references": [
+        "GUID:ff4756ce24609e552afaf32a37fa19fa"
+    ],
+    "includePlatforms": [],
+    "excludePlatforms": [],
+    "allowUnsafeCode": false,
+    "overrideReferences": false,
+    "precompiledReferences": [],
+    "autoReferenced": true,
+    "defineConstraints": [],
+    "versionDefines": [],
+    "noEngineReferences": false
+}

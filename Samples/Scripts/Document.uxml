@@ -1,0 +1,4 @@
+<ui:UXML xmlns:ui="UnityEngine.UIElements" xmlns:uie="UnityEditor.UIElements" xsi="http://www.w3.org/2001/XMLSchema-instance" engine="UnityEngine.UIElements" editor="UnityEditor.UIElements" noNamespaceSchemaLocation="../../../../UIElementsSchema/UIElements.xsd" editor-extension-mode="False">
+    <Style src="project://database/Assets/com.alephvault.unity.daylight/Samples/Scripts/style.uss?fileID=7433441132597879392&amp;guid=af7a0ae59931c75bb9eebbc38cec40fd&amp;type=3#style" />
+    <ui:VisualElement name="Root" style="flex-grow: 1; width: 50%; height: 50%; position: absolute; translate: -50% -50%; top: 50%; left: 50%; visibility: visible; -unity-background-scale-mode: stretch-to-fill;" />
+</ui:UXML>
