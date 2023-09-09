@@ -1,0 +1,68 @@
+:root {
+    --color-brightest: #BRIGHTEST_COLOR#;
+    --color-brighter: #BRIGHTER_COLOR#;
+    --color-middle: #MIDDLE_COLOR#;
+    --color-darker: #DARKER_COLOR#;
+    --color-darkest: #DARKEST_COLOR#;
+    --border-width: 1px;
+}
+
+VisualElement.dialog.#CLASS#, 
+.#CLASS# VisualElement.dialog {
+    /* background-image: url('lunar-background.png'); */
+}
+
+VisualElement.dialog.#CLASS# Label,
+.#CLASS# VisualElement.dialog Label {
+    color: var(--color-brightest);
+}
+
+.#CLASS# Button,
+Button.#CLASS# {
+    background-color: var(--color-middle);
+    border-width: var(--border-width);
+    border-left-color: var(--color-brighter);
+    border-top-color: var(--color-brighter);
+    border-right-color: var(--color-darker);
+    border-bottom-color: var(--color-darker);
+}
+
+.#CLASS# Button:active,
+Button.#CLASS#:active {
+    background-color: var(--color-brighter);
+    border-width: var(--border-width);
+    border-left-color: var(--color-brightest);
+    border-top-color: var(--color-brightest);
+    border-right-color: var(--color-middle);
+    border-bottom-color: var(--color-middle);
+}
+
+.#CLASS# Button:focus,
+Button.#CLASS#:focus {
+    background-color: var(--color-brighter);
+    border-width: var(--border-width);
+    border-left-color: var(--color-brightest);
+    border-top-color: var(--color-brightest);
+    border-right-color: var(--color-middle);
+    border-bottom-color: var(--color-middle);
+}
+
+.#CLASS# Button:hover,
+Button.#CLASS#:hover {
+    background-color: var(--color-brighter);
+    border-width: var(--border-width);
+    border-left-color: var(--color-brightest);
+    border-top-color: var(--color-brightest);
+    border-right-color: var(--color-middle);
+    border-bottom-color: var(--color-middle);
+}
+
+.#CLASS# Button:disabled,
+Button.#CLASS#:disabled {
+    background-color: var(--color-darker);
+    border-width: var(--border-width);
+    border-left-color: var(--color-middle);
+    border-top-color: var(--color-middle);
+    border-right-color: var(--color-darkest);
+    border-bottom-color: var(--color-darkest);
+}
