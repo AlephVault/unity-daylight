@@ -27,13 +27,6 @@ VisualElement.right-toolbar {
     top: 0;
 }
 
-Button.mini {
-    color: white;
-    margin: 0;
-    width: 32px;
-    height: 32px;
-}
-
 VisualElement.dialog {
     position: absolute;
     display: none;
@@ -47,13 +40,22 @@ VisualElement.dialog {
 }
 
 VisualElement.dialog > VisualElement.left-toolbar {
-    right: var(--dialog-toolbar-offset);
+    left: var(--dialog-toolbar-offset);
     top: var(--dialog-toolbar-offset);
 }
 
 VisualElement.dialog > VisualElement.right-toolbar {
     right: var(--dialog-toolbar-offset);
     top: var(--dialog-toolbar-offset);
+}
+
+VisualElement.dialog > VisualElement.left-toolbar > Button,
+VisualElement.dialog > VisualElement.right-toolbar > Button {
+    color: white;
+    margin: 0;
+    padding: 4px;
+    width: 32px;
+    height: 32px;
 }
 
 VisualElement.section {
@@ -87,15 +89,19 @@ VisualElement.dialog Button:disabled {
     color: gray;
 }
 
-VisualElement.dialog VisualElement.content {
+VisualElement.dialog > VisualElement.content {
     flex-basis: 10px;
     flex-grow: 4;
 }
 
-VisualElement.dialog VisualElement.buttons {
+VisualElement.dialog > VisualElement.buttons {
     margin-top: 10px;
     flex-direction: row;
     justify-content: space-around;
     flex-basis: 10px;
     flex-grow: 1;
+}
+
+VisualElement.dialog > VisualElement.buttons Button {
+    align-self: stretch;
 }
