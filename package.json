@@ -4,9 +4,7 @@
   "displayName": "Aleph Vault - Unity - DayLight",
   "description": "A utility to get the daylight settings working on behaviours and documents.",
   "unity": "2021.3",
-  "dependencies": {
-    "com.alephvault.unity.boilerplates": "0.0.1"
-  },
+  "dependencies": {},
   "author": {
     "name": "Aleph Vault",
     "email": "info@alephvault.com",
