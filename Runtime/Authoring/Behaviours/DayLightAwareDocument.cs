@@ -17,7 +17,7 @@ namespace AlephVault.Unity.DayLight
             public class DayLightAwareDocument : DayLightAware
             {
                 // The related UIDocument component.
-                private UIDocument document;
+                protected UIDocument document;
 
                 /// <summary>
                 ///   The class for the solar daylight type.
