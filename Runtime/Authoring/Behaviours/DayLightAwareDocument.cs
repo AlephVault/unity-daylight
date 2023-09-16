@@ -37,7 +37,7 @@ namespace AlephVault.Unity.DayLight
                     base.Awake();
                 }
 
-                protected void Start()
+                protected virtual void Start()
                 {
                     OnDaylightChanged(DayLightSettings.Daylight);
                 }
