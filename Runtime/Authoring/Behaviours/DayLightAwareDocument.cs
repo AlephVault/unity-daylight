@@ -1,3 +1,4 @@
+using System;
 using AlephVault.Unity.DayLight.Core;
 using UnityEngine;
 using UnityEngine.UIElements;
@@ -31,6 +32,9 @@ namespace AlephVault.Unity.DayLight
                 [SerializeField]
                 private string lunarClass = "lunar";
 
+                // The current daylight type.
+                private DayLightSettings.DaylightType currentDaylightType;
+
                 protected override void Awake()
                 {
                     document = GetComponent<UIDocument>();
@@ -49,8 +53,9 @@ namespace AlephVault.Unity.DayLight
                 {
                     return "Root";
                 }
-                
-                protected override void OnDaylightChanged(DayLightSettings.DaylightType daylightType)
+
+                // Updates the daylight settings.
+                private void UpdateDocumentDaylight(DayLightSettings.DaylightType daylightType)
                 {
                     VisualElement element = document.rootVisualElement.Q<VisualElement>(RootElementName());
                     element.RemoveFromClassList(solarClass);
@@ -66,6 +71,24 @@ namespace AlephVault.Unity.DayLight
                             break;
                     }
                     element.AddToClassList(ussClass);
+                }
+                
+                /// <summary>
+                ///   Updates the daylight when changed.
+                /// </summary>
+                /// <param name="daylightType">The new daylight type</param>
+                protected override void OnDaylightChanged(DayLightSettings.DaylightType daylightType)
+                {
+                    currentDaylightType = daylightType;
+                    UpdateDocumentDaylight(daylightType);
+                }
+
+                /// <summary>
+                ///   On enable, the daylight is also updated.
+                /// </summary>
+                protected virtual void OnEnable()
+                {
+                    UpdateDocumentDaylight(currentDaylightType);
                 }
             }
         }
