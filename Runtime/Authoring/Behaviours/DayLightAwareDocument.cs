@@ -57,7 +57,9 @@ namespace AlephVault.Unity.DayLight
                 // Updates the daylight settings.
                 private void UpdateDocumentDaylight(DayLightSettings.DaylightType daylightType)
                 {
-                    VisualElement element = document.rootVisualElement.Q<VisualElement>(RootElementName());
+                    VisualElement element = document.rootVisualElement?.Q<VisualElement>(RootElementName());
+                    if (element == null) return;
+
                     element.RemoveFromClassList(solarClass);
                     element.RemoveFromClassList(lunarClass);
                     string ussClass = "";
